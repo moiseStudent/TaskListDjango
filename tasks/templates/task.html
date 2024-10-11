@@ -1,0 +1,62 @@
+<section class="tasks_container">
+
+
+    {% for task in tasks%}
+
+
+    <section class="task_container">
+        <div class="task_container-title">
+
+            <div class="title">
+                <p>
+                    <button> <a href="{% url 'delete' task.id%}">Completar </a></button>
+                    {{ task.title }}
+                </p>
+
+            </div>
+            <div class="buttons">
+                <a href="{%url 'edit' task.id %}">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="task_container-description">
+            <p id="showDescription">
+                {{ task.description }}
+            </p>
+        </div>
+
+        <div class="description-windows" id="description-windows">
+            <div class="description-windows-container">
+                <button class="close" onclick="document.getElementById('description-windows').style.display='none';">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+
+
+                </button>
+
+                <p>
+                    {{ task.description }}
+                </p>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <script>
+        document.getElementById("showDescription").addEventListener("click", function () {
+            var textoOculto = document.getElementById("description-windows");
+            textoOculto.style.display = "flex";
+
+        });
+    </script>
+
+    {% endfor %}
+
+
+</section>

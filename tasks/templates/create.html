@@ -1,0 +1,32 @@
+{% extends 'layout/base.html' %}
+
+{% block title %} Create {% endblock %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<section class="create_task">
+
+    <div class="create_task-form">
+
+        <form action="{% url 'new' %}" method="POST">
+            {% csrf_token %}
+
+
+            <label for="title">Titulo</label>
+            <input type="text" placeholder="title" name="title">
+
+            <label for="description">Descripcion</label>
+            <textarea name="description"></textarea>
+
+            <input type="submit" value="Crear Tarea">
+
+        </form>
+    </div>
+
+</section>
+
+
+
+{% endblock %}

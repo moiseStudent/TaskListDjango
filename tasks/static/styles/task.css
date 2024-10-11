@@ -1,0 +1,128 @@
+.tasks_container {
+    margin: 0px auto;
+    margin-top: 1rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.task_container {
+    border-bottom: 1px solid #7e7a7a;
+    margin-bottom: 1rem;
+}
+
+.task_container-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task_container-title .title p {
+    font-family: sans-serif;
+    font-size: 1rem;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.task_container .title button {
+    border: none;
+    background: #008000;
+    border-radius: 4px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: .7rem;
+    padding: 5px;
+}
+
+.task_container .title button:hover {
+    background: #11b611;
+}
+
+.task_container .task_container-title .buttons {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.tasks_container .task_container .buttons .fa-edit:hover,
+.fa-edit {
+    color: red;
+}
+
+.tasks_container .task_container .buttons .fa-edit {
+    color: #7e7a7a;
+    font-size: 1.10rem;
+}
+
+/* Hover accede al elemento .buttons */
+
+.tasks_container:hover .task_container-title .buttons {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.task_container-description {
+    margin-top: .40rem;
+    margin-bottom: .20rem;
+}
+
+.task_container-description p {
+    color: #aaaaaa;
+    font-size: .70rem;
+    cursor: pointer;
+}
+
+/* Vetana oculta */
+
+.task_container-description p:hover {
+    color: #8b8787;
+}
+
+.description-windows {
+    /* Flex */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000;
+    opacity: .65;
+    padding: 30px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 800;
+}
+
+.description-windows-container {
+    background: rgba(255, 255, 255, 1);
+    position: relative;
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.description-windows-container p {
+    color: #000;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    padding: 3px 5px;
+}
+
+.close:hover {
+    padding: 3px 5px;
+    border-radius: 3px;
+    background: #aaa;
+}

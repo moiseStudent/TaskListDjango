@@ -1,0 +1,59 @@
+.create_task {
+    width: 60%;
+    position: absolute;
+    margin: 0px auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    /*opacity: .7;*/
+}
+
+
+.create_task .create_task-form {
+    position: absolute;
+    margin: 0px auto;
+    top: 2rem;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #fff;
+    width: 60%;
+    height: 60%;
+    z-index: 300;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+.create_task .create_task-form label {
+    font-size: .7rem;
+    display: block;
+}
+
+
+.create_task .create_task-form input {
+    display: inline-block;
+    width: 80%;
+    margin: 0px auto;
+    margin-bottom: 1rem;
+}
+
+
+.create_task .create_task-form textarea {
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+
+
+.create_task-form input[type='submit'] {
+    background: forestgreen;
+    border: none;
+    border-radius: 5px;
+}
+
+.create_task-form input[type='submit']:hover {
+    background: #31cc31;
+}
